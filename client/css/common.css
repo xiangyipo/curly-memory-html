@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* CSS Reset */
+* {
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+	font-family: '微软雅黑';
+}
+ul, li {
+	list-style: none;
+}
+img {
+	display: block;
+	border: none 0;
+}
+a {
+	text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+/* Nav */
+.header_Box {
+	width: 100%;
+	height:121px;
+	background: #A6FFFF;
+	left: 0;
+	top: 0;
+	z-index: 99999999;
+}
+.nav_Box {
+	width: 1200px;
+	margin: 0 auto;
+}
+.nav {
+	width: 1200px;
+	height: 122px;
+}
+.nav li {
+	float: left;
+	width: 240px;
+	line-height: 122px;
+	text-align: center;
+	position: relative;
+	z-index: 99999999;
+}
+.nav li.currentB {
+	width: 350px;
+	margin: 0 5px;
+}
+.nav li a {
+	display: block;
+	font-size: 18px;
+	color: #000000;
+	letter-spacing: 2px;
+}
+.nav li.currentB a:hover {
+	background: none;
+}
+.nav li ul.sub_Nav {
+	position: absolute;
+	left: 0;
+	top: 0px;
+	background: #A6FFFF;
+}
+.nav li ul.sub_Nav li {
+	width: 240px;
+	text-align: center;
+	line-height: 50px;
+}
+.nav li ul.sub_Nav li a {
+	display: block;
+	font-size: 12px;
+	background: url(../images/nav_b.jpg) no-repeat bottom;
+}
+.nav li ul.sub_Nav li a:hover {
+	color: #fff;
+}
+.nav li ul.sub_Nav div.second_Tit {
+	width: 240px;
+	height: 120px;
+	border-bottom: 2px solid #ff25b2;
+	line-height: 130px;
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+	color: #000000;
+	letter-spacing: 2px;
+}
+.nav li ul.sub_Nav div.second_Tit a {
+	color: #fff;
+}

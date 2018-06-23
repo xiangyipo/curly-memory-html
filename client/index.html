@@ -1,0 +1,486 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+*{margin:0;padding:0;list-style-type:none;}
+a{text-decoration:none;color:#000;}
+</style>
+<script src="js/min/jquery-v1.10.2.min.js" type="text/javascript"></script>
+<title>首页</title>
+<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/nav.js"></script>
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+<link href="css/banner.css"  type="text/css" rel="stylesheet">
+<script src="js/min/flickerplate.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+
+<!--head-->
+<div style="height:46px;padding-top:15px;width:1150px;margin:0 auto;">
+	<div style="width:155px;float:left;height:46px;color:#999999;font-size:12px;">
+    	服务热线：400-8786-317
+    </div>
+    <div style="width:554px;float:right;height:46px;">
+        <div>
+        	<div style="float:left;margin-left:0px;">Language:<a href="" style="font-size:12px;padding:07px;color:#999999;">中文</a></div>
+            <div style="float:left;margin-top:2px;"><img src="images/shu.jpg" /></div>
+            <div style="float:left;margin-top:2px;"><a href="" style="font-size:12px;padding:07px;color:#999999;">EN</a></div>
+            <div style="float:left;margin-top:-12px;margin-left:10px;"><img src="images/renwu-3.jpg" /></div>
+            <div style="float:left;"><a href="logo/logo.php" style="font-size:12px;padding:0 7px;color:#999999;">1054347664@qq.com</a></div>
+            <div style="float:left;margin-top:-2px;margin-left:14px;"><img src="images/1.jpg" /></div>
+			<div style="float:left;"><a href="#" style="font-size:12px;padding:0 5px;color:#999999;">Open 24X7</a></div>
+        </div>
+
+    </div>
+</div>
+<div style="clear:both;"></div>
+<!--head-->
+<!--nav-->
+<div class="header_Box">
+    <div class="nav_Box">
+        <ul class="nav">
+            <li><a>HOME</a>
+                <ul class="sub_Nav" style="display:none">
+                    <div class="second_Tit"><a href="index.html">HOME</a></div>
+                </ul>
+            </li>
+            <li><a>ABOUT US</a>
+                <ul class="sub_Nav" style="display:none">
+                    <div class="second_Tit"><a href="about.html">ABOUT US</a></div>
+                    <li><a href="about.html">Guiding Values</a></li>
+                    <li><a href="#">Awards and Recognition</a></li>
+                    <li><a href="about.html">Industries We Serve</a></li>
+                    <li><a href="about.html">CTD Foundation</a></li>
+                </ul>
+            </li>
+            <li><a>SERVICES</a>
+                <ul class="sub_Nav" style="display:none">
+                    <div class="second_Tit"><a href="brand.html">SERVICES</a></div>
+                    <li><a href="#">FBA/Amazon service</a></li>
+                    <li><a href="#">Door-to-Door service</a></li>
+					<li><a href="#">Air & Sea freight</a></li>
+					<li><a href="#">Express service</a></li>
+					<li><a href="#">Railway service</a></li>
+					<li><a href="#">Import to China service</a></li>
+                </ul>
+            </li>
+            <li><a>CUSTOMER CENTER</a>
+                <ul class="sub_Nav" style="display:none">
+                    <div class="second_Tit"><a href="product.html">CUSTOMER CENTER</a></div>
+                    <li><a href="#">Why Work With CTD?</a></li>
+                    <li><a href="#">Frequently Asked Questions</a></li>
+                    <li><a href="#">Documents and Downloads</a></li>
+                    <li><a href="#">How to pay us?</a></li>
+                </ul>
+            </li>
+			
+			 <li><a>JOIN OUR TEAM</a>
+                <ul class="sub_Nav" style="display:none">
+                    <div class="second_Tit"><a href="product.html">JOIN OUR TEAM</a></div>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Become a Freight Agent</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--nav-->
+
+<!--banner-->
+<link type="text/css" href="css/style.css" rel="stylesheet"/>
+
+<script type="text/javascript" src="js/jquery.event.drag-1.5.min.js"></script>
+<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$(".main_visual").hover(function(){
+		$("#btn_prev,#btn_next").fadeIn()
+	},function(){
+		$("#btn_prev,#btn_next").fadeOut()
+	});
+	
+	$dragBln = false;
+	
+	$(".main_image").touchSlider({
+		flexible : true,
+		speed : 200,
+		btn_prev : $("#btn_prev"),
+		btn_next : $("#btn_next"),
+		paging : $(".flicking_con a"),
+		counter : function (e){
+			$(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+		}
+	});
+	
+	$(".main_image").bind("mousedown", function() {
+		$dragBln = false;
+	});
+	
+	$(".main_image").bind("dragstart", function() {
+		$dragBln = true;
+	});
+	
+	$(".main_image a").click(function(){
+		if($dragBln) {
+			return false;
+		}
+	});
+	
+	timer = setInterval(function(){
+		$("#btn_next").click();
+	}, 5000);
+	
+	$(".main_visual").hover(function(){
+		clearInterval(timer);
+	},function(){
+		timer = setInterval(function(){
+			$("#btn_next").click();
+		},5000);
+	});
+	
+	$(".main_image").bind("touchstart",function(){
+		clearInterval(timer);
+	}).bind("touchend", function(){
+		timer = setInterval(function(){
+			$("#btn_next").click();
+		}, 5000);
+	});
+	
+});
+</script>
+<div class="main_visual">
+	<div class="flicking_con">
+		<a href="#"></a>
+		<a href="#"></a>
+		<a href="#"></a>
+		<a href="#"></a>
+		<a href="#"></a>
+	</div>
+    <!--轮播图存放路径-->
+	<div class="main_image">
+		<ul>
+        	<li><span class="img_1"></span></li>
+            <li><span class="img_2"></span></li>
+			<li><span class="img_3"></span></li>
+			<li><span class="img_4"></span></li>
+			<li><span class="img_5"></span></li>
+		</ul>
+		<a href="javascript:;" id="btn_prev"></a>
+		<a href="javascript:;" id="btn_next"></a>
+	</div>
+</div>
+<!--banner-->
+<!--Messy-->
+<div class="wow wobble animated animated" data-wow-duration="2s" style="width:1150px;height:156px;margin:0 auto;background:#f1f1f1;margin-top:27px;margin-bottom:19px;">
+	<div style="width:351px;height:114px;padding-top:22px;margin-left:31px;float:left;">
+    	<div style="font-size:18px;">
+        	核芯·智动淋浴房
+        </div>
+        <div style="margin-top:9px;border:1px #dad9d9 solid;">
+        	<img src="images/Messy-1.jpg" />
+        </div>
+    </div>
+    
+    <div style="width:351px;height:114px;padding-top:22px;margin-left:22px;float:left;">
+    	<div style="font-size:18px;">
+        	家装·设计师专属
+        </div>
+        <div style="margin-top:9px;border:1px #dad9d9 solid;">
+        	<img src="images/Messy-2.jpg" />
+        </div>
+    </div>
+    
+    <div style="width:351px;height:114px;padding-top:22px;margin-left:22px;float:left;">
+    	<div style="font-size:18px;">
+        	CCTV视频展播中心
+        </div>
+        <div style="margin-top:9px;border:1px #dad9d9 solid;">
+        	<img src="images/Messy-3.jpg" />
+        </div>
+    </div>
+</div>
+<!--Messy-->
+<!--Main-->
+<div class="wow wobble animated animated" data-wow-duration="2s" style="width:1150px;height:441px;margin:0 auto;padding-bottom:19px;">
+	<div style="background:url(images/Main-1.jpg) center no-repeat;width:763px;height:441px;float:left;">
+    	<div style="width:752px;height:43px;line-height:42px;color:#FFF;font-size:16px;background:#313131;padding-left:11px;">
+        	新品体验 - New Experience
+        </div>
+    </div>
+    <div style="width:366px;height:441px;background:url(images/Main-2.jpg) center no-repeat;float:right;">
+        	
+    </div>
+</div>
+<div style="width:1150px;height:407px;margin:0 auto;padding-bottom:19px;">
+	<div style="background:url(images/Main-3.jpg) center no-repeat;width:784px;height:407px;float:left;">
+    	<div style="width:762px;height:43px;margin-top:364px;line-height:42px;color:#FFF;font-size:16px;background:#313131;padding-left:23px;">
+        	卫生间案例体验 - Case Experience
+        </div>
+    </div>
+    <div style="width:366px;height:407px;background:url(images/Main-4.jpg) center no-repeat;float:right;">
+        	<div style="font-size:28px;color:#FFF;text-align:center;font-weight:bold;padding-top:40px;">0元专属定制</div>
+            <div style="width:275px;margin:0 auto;margin-top:20px;">
+            	<input style="height:42px;line-height:42px;color:#cccccc;padding-left:45px;width:230px;border-radius:5px;border:none;" type="text"  name="name" placeholder="您的姓名" />
+                <img style="margin-top:-42px;margin-left:5px;" src="images/renwu-1.jpg">
+            </div>
+            
+            <div style="width:275px;margin:0 auto;margin-top:10px;">
+            	<input style="height:42px;line-height:42px;color:#cccccc;padding-left:45px;width:230px;border-radius:5px;border:none;" type="text"  name="tel" placeholder="手机号" />
+                <img style="margin-top:-42px;margin-left:5px;" src="images/renwu-2.jpg">
+            </div>
+            
+            <div style="width:275px;margin:0 auto;margin-top:10px;">
+            	<div style="width:172px;float:left;">
+                    <input style="height:42px;line-height:42px;color:#cccccc;padding-left:45px;width:127px;border-radius:5px;border:none;" type="text"  name="sex" placeholder="您的验证码" />
+                    <img style="margin-top:-42px;margin-left:5px;" src="images/renwu-3.jpg">
+                </div>
+                <div style="font-size:14px;color:#FFF;text-decoration:underline;float:right;line-height:42px;margin-right:5px;">
+                	获取验证码
+                </div>
+            </div>
+            
+            <div style="clear:both;"></div>
+            
+            <div id="sjld" style="position:relative;">
+            <div style="width:275px;margin:0 auto;margin-top:10px;">
+            	<div style="width:132px;height:42px;line-height:42px;float:left;">
+                <div class="m_zlxg" id="shenfen" style="background:url(images/zlxg2.jpg) no-repeat;border-radius:5px;">
+                    <p title="">选择省份</p>
+                    <div class="m_zlxg2">
+                        <ul></ul>
+                    </div>
+            	</div>
+                </div>
+                
+                <div style="width:132px;height:42px;line-height:42px;float:right;">
+                    
+                    <div class="m_zlxg" id="chengshi" style="background:url(images/zlxg2.jpg) no-repeat;border-radius:5px;">
+                        <p title="">选择城市</p>
+                        <div class="m_zlxg2">
+                            <ul></ul>
+                        </div>
+                    </div>
+                    <input id="sfdq_num" type="hidden" value="" />
+                    <input id="csdq_num" type="hidden" value="" />
+                    <input id="sfdq_tj" type="hidden" value="" />
+                    <input id="csdq_tj" type="hidden" value="" />
+                    <input id="qydq_tj" type="hidden" value="" />
+                </div>
+            </div>
+            </div>
+             <div style="clear:both;"></div>
+            
+            <div style="width:275px;line-height:42px;background:#007bd6;margin:0 auto;margin-top:18px;text-align:center;border-radius:5px;color:#FFF;font-size:16px;">
+            	免费预约报名
+            </div>
+    </div>
+</div>
+<div style="clear:both;"></div>
+<!--Main-->
+<!--New-->
+<style>
+.slide-wrap{width:350px;height:208px;}
+.slide-mask{position:relative;overflow:hidden;height:208px;}
+.slide-group{position:absolute; top:0px; left:0;width:100%;}
+.slide{height:210px;color:#000;}
+/* nav
+----------------------*/
+.slide-nav{text-align:center;position:absolute;margin-top:-20px;margin-left:300px;}
+.slide-nav ul{margin:0;padding:0;}
+.slide-nav li{float:left;margin-left:3px;float:right;width:12px;height:12px;background:rgb(153, 153, 153);cursor:pointer;border-radius:6px;}
+.slide-nav li.current{background:rgb(0, 123, 214);border-radius:6px;}
+</style>
+<div style="width:1150px;height:238px;margin:0 auto;padding-bottom:38px;">
+	<div style="width:361px;height:238px;background:url(images/New-1.jpg) center no-repeat;float:left;">
+    	
+    </div>
+    <div style="width:350px;float:left;margin-left:30px;margin-right:30px;">
+    	<div style="height:31px;width:340px;background:url(images/New-2.jpg) no-repeat;">
+        	<n style="font-size:16px;line-height:30px;color:#FFF;margin-left:10px;">新闻聚焦  News</n>
+            <n style="float:right;font-size:14px;color:#b6b6b6;margin-top:12px;">更多>></n>
+        </div>
+        <div style="clear:both;"></div>
+        <div class="slide-wrap">
+            <div class="slide-mask">
+                <ul class="slide-group">
+                    <li class="slide">
+                        <div style="border-bottom:1px #999999 dashed;padding-bottom:24px;height:60px;padding-top:22px;">
+                            <div style="width:20px;height:60px;float:left;text-align:center;margin-top:6px;">
+                                <img src="images/dian-1.jpg" />
+                            </div>
+                            <div style="float:right;width:327px;">
+                                <div style="font-size:16px;color:#959595;width:316px;">
+                                    选择有色透明材质制造的淋浴房别有一番...
+                                </div>
+                                <div style="width:300px;line-height:20px;font-size:12px;margin-top:4px;color:#999999;">
+                                    目前市场上淋浴房的基本构造是底盘加围栏。底盘质地有亚克力玻璃钢等，围栏上安有塑料或钢化玻....
+                                    <n style="float:right;margin-top:4px;margin-right:-15px;"><img class="New4" src="images/New-4.jpg" /></n>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="padding-bottom:15px;height:60px;padding-top:22px;">
+                            <div style="width:20px;height:60px;float:left;text-align:center;margin-top:6px;">
+                                <img src="images/dian-1.jpg" />
+                            </div>
+                            <div style="float:right;width:327px;">
+                                <div style="font-size:16px;color:#959595;width:316px;">
+                                    选择有色透明材质制造的淋浴房别有一番...
+                                </div>
+                                <div style="width:300px;line-height:20px;font-size:12px;margin-top:4px;color:#999999;">
+                                    目前市场上淋浴房的基本构造是底盘加围栏。底盘质地有亚克力玻璃钢等，围栏上安有塑料或钢化玻....
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="slide">
+                        <div style="border-bottom:1px #999999 dashed;padding-bottom:24px;height:60px;padding-top:22px;">
+                            <div style="width:20px;height:60px;float:left;text-align:center;margin-top:6px;">
+                                <img src="images/dian-1.jpg" />
+                            </div>
+                            <div style="float:right;width:327px;">
+                                <div style="font-size:16px;color:#959595;width:316px;">
+                                    选择有色透明材质制造的淋浴房别有一番...
+                                </div>
+                                <div style="width:300px;line-height:20px;font-size:12px;margin-top:4px;color:#999999;">
+                                    目前市场上淋浴房的基本构造是底盘加围栏。底盘质地有亚克力玻璃钢等，围栏上安有塑料或钢化玻....
+                                    <n style="float:right;margin-top:4px;margin-right:-15px;"><img src="images/New-4.jpg" /></n>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="padding-bottom:15px;height:60px;padding-top:22px;">
+                            <div style="width:20px;height:60px;float:left;text-align:center;margin-top:6px;">
+                                <img src="images/dian-1.jpg" />
+                            </div>
+                            <div style="float:right;width:327px;">
+                                <div style="font-size:16px;color:#959595;width:316px;">
+                                    选择有色透明材质制造的淋浴房别有一番...
+                                </div>
+                                <div style="width:300px;line-height:20px;font-size:12px;margin-top:4px;color:#999999;">
+                                    目前市场上淋浴房的基本构造是底盘加围栏。底盘质地有亚克力玻璃钢等，围栏上安有塑料或钢化玻....
+                                </div>
+                            </div>
+                        </div>
+                    </li>     
+                    <li class="slide">
+                        <div style="border-bottom:1px #999999 dashed;padding-bottom:24px;height:60px;padding-top:22px;">
+                            <div style="width:20px;height:60px;float:left;text-align:center;margin-top:2px;">
+                                <img src="images/dian-1.jpg" />
+                            </div>
+                            <div style="float:right;width:327px;">
+                                <div style="font-size:16px;color:#959595;width:316px;">
+                                    选择有色透明材质制造的淋浴房别有一番...
+                                </div>
+                                <div style="width:300px;line-height:20px;font-size:12px;margin-top:4px;color:#999999;">
+                                    目前市场上淋浴房的基本构造是底盘加围栏。底盘质地有亚克力玻璃钢等，围栏上安有塑料或钢化玻....
+                                    <n style="float:right;margin-top:4px;margin-right:-15px;"><img src="images/New-4.jpg" /></n>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="padding-bottom:15px;height:60px;padding-top:22px;">
+                            <div style="width:20px;height:60px;float:left;text-align:center;margin-top:2px;">
+                                <img src="images/dian-1.jpg" />
+                            </div>
+                            <div style="float:right;width:327px;">
+                                <div style="font-size:16px;color:#959595;width:316px;">
+                                    选择有色透明材质制造的淋浴房别有一番...
+                                </div>
+                                <div style="width:300px;line-height:20px;font-size:12px;margin-top:4px;color:#999999;">
+                                    目前市场上淋浴房的基本构造是底盘加围栏。底盘质地有亚克力玻璃钢等，围栏上安有塑料或钢化玻....
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="slide-nav">
+                <ul>
+                    <li class="bullet"></li>
+                    <li class="bullet"></li>
+                    <li class="bullet"></li> 
+                </ul>
+            </div>
+    </div>
+    </div>
+    <div style="width:366px;height:238px;background:url(images/New-3.jpg) center no-repeat;float:right;">
+    	
+    </div>
+</div>
+
+<script type="text/javascript" src="js/index.js"></script>
+<!--New-->
+<!--foot-->
+<div style="width:100%;background:#BEBEBE;height:332px;">
+	<div style="width:1150px;margin:0 auto;">
+    	<div style="width:650px;height:280px;float:left;">
+            <div style="width:650px;height:183px;padding-top:52px;">
+                <div style="width:155px;float:left;">
+                    <div style="color:#a1774f;font-size:18px;">ABOUT US</div>
+                    <div style="color:#000000;font-size:14px;line-height:26px;margin-top:12px;">Guiding Values</div>
+                    <div style="color:#000000;font-size:14px;line-height:26px;">Awards and Recognition</div>
+                    <div style="color:#000000;font-size:14px;line-height:26px;">Industries We Serve</div>
+                    <div style="color:#000000;font-size:14px;line-height:26px;">CTD Foundation</div>
+                </div>
+                
+                <div style="width:155px;float:left;">
+                    <div style="color:#a1774f;font-size:18px;">JOIN OUR TEAM</div>
+                    <div style="color:#000000;font-size:14px;line-height:26px;margin-top:12px;">Careers</div>
+                    <div style="color:#000000;font-size:14px;line-height:26px;">Become a Freight Agent</div>
+                </div>
+                
+                <div style="width:155px;float:left;">
+                    <div style="color:#a1774f;font-size:18px;">SERVICES</div>
+                    <div style="color:#000000;font-size:14px;line-height:26px;margin-top:12px;">FBA/Amazon service</div>
+                    <div style="color:#000000;font-size:14px;line-height:26px;">Door-to-Door service</div>
+                    <div style="color:#000000;font-size:14px;line-height:26px;">Air & Sea freight</div>
+                </div>
+                
+                <div style="width:180px;float:left;">
+                    <div style="color:#a1774f;font-size:18px;">CUSTOMER CENTER</div>
+                    <div style="color:#000000;font-size:14px;line-height:26px;margin-top:12px;">Why Work With CTD?</div>
+                    <div style="color:#000000;font-size:14px;line-height:26px;">Frequently Asked Questions</div>
+                    <div style="color:#000000;font-size:14px;line-height:26px;">How to pay us?</div>
+                </div>
+            </div>
+            <div>
+            	<div style="font-size:14px;color:#000000;;line-height:26px;margin-top:5px;">all right reserved©Shenzhen CTD Logistics Co.,Ltd         </div>
+                <div style="font-size:14px;color:#000000;line-height:26px;">地址：广东中山市西区沙朗金龙工业区盈通工业路8号   </div>
+            </div>
+        </div>
+        
+        <div style="float:right;height:332px;width:255px;">
+        	<div style="margin-top:32px;">
+            	<img src="images/rexian.jpg" />
+            </div>
+            <div style="margin-top:34px;margin-left:46px;">
+            	<img src="images/er.jpg" />
+                <div style="font-size:15px;color:#000000;margin-top:12px;margin-left:2px;">微信公众号平台</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--foot-->
+<script type="text/javascript" src="js/wow.min.js"></script>  
+<script type="text/javascript">  
+            //          new WOW().init()  
+            wow = new WOW({  
+                boxClass: 'wow', // default 盒子类名  
+                animateClass: 'animated', // default 为animate.css触发css动画的库  
+                offset: 0, // default 偏移量  
+                mobile: true, // default 是否支持手机  
+                live: true // default 检查新元素  
+            })  
+            wow.init();  
+        </script> 
+</body>
+</html>

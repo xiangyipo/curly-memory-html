@@ -1,0 +1,159 @@
+@charset "utf-8";
+/*banner*/
+.documentation {
+	width: 1100px;
+	margin: 0px auto;
+	padding: 100px 0px;
+}
+.documentation h3, p {
+	text-align: center;
+}
+.documentation h3 {
+	margin: 0px 0px 20px 0px;
+	font-weight: 300;
+	font-size: 2em;
+}
+/*关于我们*/
+.bg_1 {
+	width: 100%;
+	height: 230px;
+	background: url(../images/1bg.jpg) center center;
+}
+.about_Us_Box {
+	width: 1200px;
+	height: 478px;
+	position: relative;
+	margin: 0 auto;
+}
+.about_Us {
+	width: 1200px;
+	height: 478px;
+	background: url(../images/1f.jpg);
+	position: absolute;
+	left: 0;
+	top: -30px;
+}
+.about_Box {
+	width: 1200px;
+	height: 478px;
+}
+.about_Img {
+	float: left;
+	width: 540px;
+	height: 478px;
+	position: relative;
+}
+.about_Img img {
+	width: 472px;
+	height: 484px;
+	position: absolute;
+	left: 25px;
+	top: -30px;
+}
+.about_Text {
+	float: left;
+	width: 660px;
+	height: 454px;
+	padding-top: 30px;
+}
+.about_Up {
+	width: 100px;
+	height: 36px;
+	background: url(../images/us.png);
+	padding-left: 520px;
+	margin-bottom: 30px;
+}
+.about_Up a {
+	display: block;
+	width: 88px;
+	height: 36px;
+	background: url(../images/more.png);
+}
+.about_Up a:hover {
+	background: url(../images/more0.png);
+}
+.about_Dwn {
+	width: 629px;
+	color: #feffa2;
+	font-size: 18px;
+	line-height: 40px;
+	text-indent: 36px;
+}
+.bg_2 {
+	width: 100%;
+	height: 230px;
+	background: url(../images/2bg.jpg) center center;
+}
+/*产品开始*/
+.bg_3 {
+	width: 100%;
+	height: 204px;
+	background: url(../images/3bg.jpg) center center;
+}
+.bg_3 img {
+	margin: 0 auto;
+	width: 636px;
+}
+.bg_4 {
+	width: 100%;
+	height: 163px;
+	background: url(../images/4bg.jpg) center center;
+}
+.bg_4 img {
+	margin: 0 auto;
+	width: 1200px;
+}
+.div_5Bg {
+	width: 100%;
+	height: 441px;
+	background: url(../images/5bg.jpg) center center;
+}
+.pro_BigBox {
+	widtH: 1200px;
+	height: 384px;
+	margin: 0 auto;
+}
+.pro_Box {
+	width: 1200px;
+	padding: 20px 0 0 30px;
+	overflow: hidden;
+}
+.pro_Box li {
+	float: left;
+	width: 360px;
+	margin-right: 30px;
+	transition: All 0.2s ease-in-out;
+	-webkit-transition: All 0.2s ease-in-out;
+	-moz-transition: All 0.2s ease-in-out;
+	-o-transition: All 0.2s ease-in-out;
+}
+.pro_Box li:hover {
+	transform: translate(0, -20px);
+	-webkit-transform: translate(0, -20px);
+	-moz-transform: translate(0, -20px);
+	-o-transform: translate(0, -20px);
+	-ms-transform: translate(0, -20px);
+}
+.pro_Box li .pro_Img {
+	width: 360px;
+	height: 300px;
+	overflow: hidden;
+}
+.pro_Box li .pro_Img img {
+	width: 360px;
+	height: 300px;
+}
+.pro_Box li .pro_Text {
+	width: 360px;
+	height: 64px;
+	font-size: 16px;
+	line-height: 64px;
+	text-align: center;
+	font-family: "微软雅黑";
+}
+.pro_Box li a {
+	color: #999;
+}
+.pro_Box li a:hover {
+	color: #fff;
+}
