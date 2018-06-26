@@ -157,3 +157,92 @@
 .pro_Box li a:hover {
 	color: #fff;
 }
+quote .section-title {
+	display: inline-block;
+	margin: 0 1em 0 0;
+	font-size: 30px;
+}
+
+[data-button], [data-button]:visited, .button, .button:visited, .gform_button, .gform_button:visited, input[type=submit], button.alm-load-more-btn, button.alm-load-more-btn:visited, button.alm-load-more-btn.done, button.alm-load-more-btn.done:visited, .rpwe-li .more-link, .rpwe-li .more-link:visited {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: inline-block;
+	width: auto;
+	margin: .5em auto;
+	padding: .4em 0.75em .5em 0.75em;
+	-webkit-appearance: none;
+	appearance: none;
+	outline: none;
+	cursor: pointer;
+	background: #13a9c7;
+	font-weight: 670;
+	font-kerning: auto;
+	text-decoration: none !important;
+	text-align: center;
+	font-size: 1em;
+	line-height: 1;
+	color: #ffffff;
+	text-transform: none;
+	border: none;
+	border-top: 1px solid transparent;
+	border-left: 1px solid transparent;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+	border-radius: 0;
+	text-shadow: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+
+
+	user-select: none;
+	transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+[data-button="arrow"], button.alm-load-more-btn, .rpwe-li .more-link {
+	text-transform: uppercase;
+	padding: 0.75em;
+}
+
+[data-button="arrow"]:after, button.alm-load-more-btn:after, .rpwe-li .more-link:after {
+	content: "\f054";
+	font-family: "FontAwesome";
+	display: inline-block;
+	font-size: 55%;
+	margin: 0 0 0 10px;
+	position: relative;
+	top: -0.25em;
+}
+
+.home-req-quote {
+	text-align: center;
+}
+.home-req-quote .section-title {
+	display: inline-block;
+	margin: 0 1em 0 0;
+	font-size: 30px;
+}
+.home-req-quote .section-title + p,
+.home-req-quote .section-title + [data-button] {
+	display: inline-block;
+}
+.home-req-quote div[data-divider] {
+	display: block;
+	clear: both;
+	width: 10%;
+	max-width: 125px;
+	height: 0px;
+	margin: 10px auto 15px auto;
+	border-bottom: 1px solid #969696;
+}
+.home-req-quote h4{
+	display: block;
+	margin: 0;
+
+}

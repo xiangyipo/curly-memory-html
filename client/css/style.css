@@ -3,14 +3,14 @@
 /*banner*/
 .main_visual{margin:0;padding:0;list-style:none;border:0;}
 .main_visual{width:100%;margin:0 auto;overflow:hidden}
-.main_visual{height:600px;overflow:hidden;position:relative;}
-.main_image{height:600px;overflow:hidden;position:relative;}
-.main_image ul{width:9999px;height:600px;overflow:hidden;position:absolute;top:0;left:0}
-.main_image li{float:left;width:100%;height:600px;}
-.main_image li span{display:block;width:100%;height:600px}
-.main_image li a{display:block;width:100%;height:600px}
-.main_image li .img_1{background:url('../images/banner1.jpg') center top no-repeat}
-.main_image li .img_2{background:url('../images/banner96.jpg') center top no-repeat}
+.main_visual{height:670px;overflow:hidden;position:relative;}
+.main_image{height:670px;overflow:hidden;position:relative;}
+.main_image ul{width:9999px;height:670px;overflow:hidden;position:absolute;top:0;left:0}
+.main_image li{float:left;width:100%;height:670px;}
+.main_image li span{display:block;width:100%;height:670px}
+.main_image li a{display:block;width:100%;height:670px}
+.main_image li .img_1{background:url('../images/11.jpg') center top no-repeat}
+.main_image li .img_2{background:url('../images/banner2.jpg') center top no-repeat}
 .main_image li .img_3{background:url('../images/banner97.jpg') center top no-repeat}
 .main_image li .img_4{background:url('../images/banner3.jpg') center top no-repeat}
 .main_image li .img_5{background:url('../images/banner4.jpg') center top no-repeat}
